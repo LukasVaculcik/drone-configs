@@ -1,0 +1,251 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32F411 (S411) 4.5.5 Jul  3 2026 / 00:24:52 (norevision) MSP API: 1.46
+# config rev: 92c695a
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name CRAZYBEEF4SX1280
+manufacturer_id HAMO
+mcu_id 004800683134510433343336
+signature 
+
+# name: Beatula
+
+# resources
+resource MOTOR 1 B08
+resource MOTOR 2 B10
+resource MOTOR 3 B06
+resource MOTOR 4 B07
+
+# feature
+feature OSD
+
+# serial
+serial 0 131073 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1800 2100 0 0
+aux 1 1 1 1150 1550 0 0
+aux 2 2 1 1700 2100 0 0
+aux 3 13 5 1700 2100 0 0
+aux 4 35 3 1800 2100 0 0
+aux 5 39 3 1325 1625 0 0
+
+# adjrange
+adjrange 0 0 2 900 2100 12 2 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E CUSTOM  5705    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWBAND  L CUSTOM     0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 1000
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 150
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
+set acc_calibration = 47,74,74,1
+set fpv_mix_degrees = 15
+set dshot_burst = OFF
+set dshot_bidir = ON
+set dshot_bitbang = AUTO
+set motor_poles = 12
+set motor_output_reordering = 0,3,2,1,4,5,6,7
+set failsafe_delay = 4
+set failsafe_recovery_delay = 20
+set align_board_roll = 180
+set align_board_yaw = 135
+set bat_capacity = 320
+set vbat_max_cell_voltage = 435
+set vbat_warning_cell_voltage = 340
+set yaw_motors_reversed = ON
+set small_angle = 180
+set yaw_deadband = 5
+set pid_process_denom = 2
+set simplified_gyro_filter = OFF
+
+# OSD
+set osd_warn_bitmask = 8191
+set osd_vbat_pos = 45
+set osd_rssi_pos = 33
+set osd_link_quality_pos = 3595
+set osd_link_tx_power_pos = 234
+set osd_rssi_dbm_pos = 3628
+set osd_rsnr_pos = 234
+set osd_tim_1_pos = 1099
+set osd_tim_2_pos = 2531
+set osd_remaining_time_estimate_pos = 234
+set osd_flymode_pos = 3533
+set osd_anti_gravity_pos = 234
+set osd_g_force_pos = 65
+set osd_throttle_pos = 1518
+set osd_vtx_channel_pos = 66
+set osd_crosshairs_pos = 2361
+set osd_ah_sbar_pos = 314
+set osd_ah_pos = 186
+set osd_current_pos = 2595
+set osd_mah_drawn_pos = 452
+set osd_wh_drawn_pos = 234
+set osd_motor_diag_pos = 234
+set osd_craft_name_pos = 565
+set osd_pilot_name_pos = 570
+set osd_gps_speed_pos = 234
+set osd_gps_lon_pos = 234
+set osd_gps_lat_pos = 234
+set osd_gps_sats_pos = 234
+set osd_home_dir_pos = 58
+set osd_home_dist_pos = 234
+set osd_flight_dist_pos = 234
+set osd_compass_bar_pos = 234
+set osd_altitude_pos = 1164
+set osd_pid_roll_pos = 234
+set osd_pid_pitch_pos = 234
+set osd_pid_yaw_pos = 234
+set osd_debug_pos = 234
+set osd_power_pos = 234
+set osd_pidrate_profile_pos = 234
+set osd_warnings_pos = 2549
+set osd_avg_cell_voltage_pos = 2563
+set osd_pit_ang_pos = 234
+set osd_rol_ang_pos = 234
+set osd_battery_usage_pos = 234
+set osd_disarmed_pos = 2486
+set osd_nheading_pos = 234
+set osd_up_down_reference_pos = 205
+set osd_ready_mode_pos = 234
+set osd_esc_tmp_pos = 1133
+set osd_esc_rpm_pos = 161
+set osd_esc_rpm_freq_pos = 234
+set osd_rtc_date_time_pos = 234
+set osd_adjustment_range_pos = 234
+set osd_flip_arrow_pos = 234
+set osd_core_temp_pos = 15437
+set osd_log_status_pos = 234
+set osd_stick_overlay_left_pos = 234
+set osd_stick_overlay_right_pos = 234
+set osd_rate_profile_name_pos = 3563
+set osd_pid_profile_name_pos = 234
+set osd_profile_name_pos = 234
+set osd_rcchannels_pos = 234
+set osd_camera_frame_pos = 35
+set osd_efficiency_pos = 234
+set osd_total_flights_pos = 234
+set osd_aux_pos = 234
+set osd_sys_goggle_voltage_pos = 234
+set osd_sys_vtx_voltage_pos = 234
+set osd_sys_bitrate_pos = 234
+set osd_sys_delay_pos = 234
+set osd_sys_distance_pos = 234
+set osd_sys_lq_pos = 100
+set osd_sys_goggle_dvr_pos = 234
+set osd_sys_vtx_dvr_pos = 234
+set osd_sys_warnings_pos = 234
+set osd_sys_vtx_temp_pos = 1165
+set osd_sys_fan_speed_pos = 234
+set osd_canvas_width = 50
+set osd_canvas_height = 18
+
+set debug_mode = RX_EXPRESSLRS_SPI
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 1
+set vtx_freq = 5658
+set displayport_msp_fonts = 0,0,0,0
+set gyro_1_sensor_align = DEFAULT
+set gyro_1_align_yaw = 0
+set gyro_2_bustype = SPI
+set gyro_2_sensor_align = CW0
+set expresslrs_uid = 246,82,247,20,91,209
+set expresslrs_rate_index = 1
+set rpm_filter_harmonics = 1
+set craft_name = Beatula
+set pilot_name = Elvis
+
+profile 0
+
+# profile 0
+set profile_name = AOS 65mm
+set vbat_sag_compensation = 100
+set angle_p_gain = 100
+set d_max_advance = 0
+set thrust_linear = 25
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 45
+set feedforward_jitter_factor = 6
+set feedforward_max_rate_limit = 95
+set dyn_idle_min_rpm = 100
+set dyn_idle_p_gain = 40
+set simplified_pids_mode = OFF
+set simplified_master_multiplier = 130
+set simplified_pi_gain = 130
+set simplified_dmax_gain = 0
+set simplified_pitch_pi_gain = 90
+set tpa_mode = PD
+set tpa_rate = 55
+set ez_landing_limit = 5
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rateprofile_name = RT_RACE
+set thr_mid = 40
+set thr_expo = 10
+set roll_rc_rate = 8
+set pitch_rc_rate = 8
+set yaw_rc_rate = 8
+set roll_srate = 35
+set pitch_srate = 35
+set yaw_srate = 35
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 80
+
+rateprofile 1
+
+# rateprofile 1
+set rateprofile_name = RT_FREE
+set roll_rc_rate = 8
+set pitch_rc_rate = 8
+set yaw_rc_rate = 8
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
