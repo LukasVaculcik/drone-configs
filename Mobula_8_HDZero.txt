@@ -1,5 +1,6 @@
 defaults nosave
 
+# diff all
 
 # version
 # Betaflight / STM32G47X (SG47) 4.5.5 Jul 31 2026 / 08:57:08 (norevision) MSP API: 1.46
@@ -145,7 +146,7 @@ set osd_esc_rpm_pos = 161
 set osd_esc_rpm_freq_pos = 234
 set osd_rtc_date_time_pos = 234
 set osd_adjustment_range_pos = 234
-set osd_flip_arrow_pos = 234
+set osd_flip_arrow_pos = 2106
 set osd_core_temp_pos = 15436
 set osd_stick_overlay_left_pos = 234
 set osd_stick_overlay_right_pos = 234
@@ -168,11 +169,12 @@ set osd_sys_vtx_dvr_pos = 234
 set osd_sys_warnings_pos = 234
 set osd_sys_vtx_temp_pos = 1165
 set osd_sys_fan_speed_pos = 234
+set osd_stat_bitmask = 14252
 set osd_canvas_width = 50
 set osd_canvas_height = 18
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 2
 set vtx_low_power_disarm = ON
 set vtx_freq = 5658
 set craft_name = Mob8
@@ -196,7 +198,7 @@ set f_yaw = 113
 set d_min_roll = 0
 set d_min_pitch = 0
 set thrust_linear = 20
-set dyn_idle_min_rpm = 40
+set dyn_idle_min_rpm = 57
 set simplified_pids_mode = OFF
 set simplified_master_multiplier = 90
 set simplified_pi_gain = 115
