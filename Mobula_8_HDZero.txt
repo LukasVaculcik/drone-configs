@@ -1,0 +1,170 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32G47X (SG47) 4.5.5 Jul 31 2026 / 08:57:08 (norevision) MSP API: 1.46
+# config rev: 92c695a
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name HDZERO_AIO15
+manufacturer_id HDZO
+mcu_id 002d003f5143500320313446
+signature 
+
+# name: Mob8
+
+# resources
+resource I2C_SCL 2 C04
+resource I2C_SDA 2 F00
+resource LED 1 F01
+
+# timer
+timer A01 AF1
+# pin A01: TIM2 CH2 (AF1)
+timer A00 AF1
+# pin A00: TIM2 CH1 (AF1)
+
+# dma
+dma SPI_SDO 2 9
+# SPI_SDO 2: DMA2 Channel 2 Request 13
+dma SPI_SDI 2 8
+# SPI_SDI 2: DMA2 Channel 1 Request 12
+dma SPI_TX 2 9
+# SPI_TX 2: DMA2 Channel 2 Request 13
+dma SPI_RX 2 8
+# SPI_RX 2: DMA2 Channel 1 Request 12
+dma ADC 1 6
+# ADC 1: DMA1 Channel 7 Request 5
+dma TIMUP 5 NONE
+dma pin A03 4
+# pin A03: DMA1 Channel 5 Request 75
+dma pin A02 3
+# pin A02: DMA1 Channel 4 Request 74
+dma pin A01 2
+# pin A01: DMA1 Channel 3 Request 57
+dma pin A00 1
+# pin A00: DMA1 Channel 2 Request 56
+dma pin A08 9
+# pin A08: DMA2 Channel 2 Request 42
+
+# feature
+feature OSD
+
+# aux
+aux 0 0 0 1775 2100 0 0
+aux 1 1 3 1900 2100 0 0
+aux 2 2 3 1350 1750 0 0
+aux 3 35 1 1200 2100 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E CUSTOM  5705    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWBAND  L CUSTOM     0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
+
+# master
+set gyro_lpf2_static_hz = 0
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set acc_calibration = 15,2,-18,1
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set motor_output_reordering = 1,3,0,2,4,5,6,7
+set yaw_motors_reversed = ON
+set pid_process_denom = 2
+set osd_vbat_pos = 14786
+set osd_rssi_pos = 15884
+set osd_flymode_pos = 15852
+set osd_vtx_channel_pos = 15404
+set osd_current_pos = 14850
+set osd_avg_cell_voltage_pos = 14818
+set osd_core_temp_pos = 15916
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 2
+set vtx_freq = 5658
+set craft_name = Mob8
+set pilot_name = Elvis
+
+profile 0
+
+# profile 0
+set p_pitch = 48
+set i_pitch = 86
+set d_pitch = 30
+set f_pitch = 118
+set p_roll = 46
+set i_roll = 82
+set d_roll = 27
+set f_roll = 113
+set p_yaw = 46
+set i_yaw = 82
+set f_yaw = 113
+set d_min_roll = 0
+set d_min_pitch = 0
+set simplified_master_multiplier = 90
+set simplified_pi_gain = 115
+set simplified_feedforward_gain = 105
+
+profile 1
+
+# profile 1
+set horizon_level_strength = 50
+
+profile 2
+
+# profile 2
+set horizon_level_strength = 50
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_mid = 24
+set thr_expo = 21
+set throttle_limit_percent = 90
+
+rateprofile 1
+
+# rateprofile 1
+set thr_mid = 24
+set thr_expo = 21
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 85
+set pitch_rc_rate = 97
+set yaw_rc_rate = 135
+set roll_srate = 58
+set pitch_srate = 55
+set yaw_srate = 49
+set throttle_limit_percent = 90
+
+rateprofile 2
+
+# rateprofile 2
+set thr_mid = 24
+set thr_expo = 21
+set throttle_limit_percent = 90
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
